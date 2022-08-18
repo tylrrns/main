@@ -1,27 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tyler Naus</title>
   <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
- <style>
+  <script>
+  function toggleText() {
+   var text = document.getElementById("demo");
+   if (text.style.display === "none") {
+    text.style.display = "block";
+   } else {
+    text.style.display = "none";
+   }
+  }
+  </script>
+  <style>
   body {
+    max-width: 800px;
+    padding: 18px;
     background-color: #fff;
     color: #000;
-    font-family: 'EB Garamond','Palatino';
+    font-family: 'EB Garamond', 'Iowan Old Style';
     font-size: 16px;
     text-align: center;
-  }
+   }
   .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
     max-width: 448px;
     margin: auto;
-  }
- </style>
+   }
+  .link_cursor {
+    cursor: pointer;
+    color: #0000ff;
+   }
+  #demo {
+    text-align: left;
+   }
+  a {
+    color: #0000ff;
+   }
+  </style>
  </head>
   <body>
    <div class="card">
-     <h1>Tyler R Naus</h1>
-     <p>Biomedical Engineering Student, Wayne State University</p>
-     <p>tnaus@wayne.edu</p>
+    <h1>Tyler R Naus</h1>
+    <h3>Biomedical Engineering Student, Wayne State University</h3>
+    <h3>tnaus@wayne.edu</h3>
+    <h4 onclick="toggleText()" class="link_cursor">+MORE</h4>
    </div>
+    <h4 id='demo' style='display: none'>Projects/Papers:
+    <br>&emsp;<a href="nervecap.html">A Biomaterial Cap for Prevention of Symptomatic Neuroma</a><br>
+    <br><a href="library.html">Library</a></h4>
   </body>
 </html>
