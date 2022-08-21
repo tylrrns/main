@@ -55,25 +55,23 @@
       <br>3. 2D Fast Fourier Transform (FFT)
       <br>4. Frequency domain filter
       <br>5. 2D Inverse Fast Fourier Transform (IFFT) </p>
+      <figure>
       <img class="img-container" src="img12.jpg">
+      </figure>
       <p><b>Bovine pulmonary artery endothelial cells in the process of dividing</b>. The mitochondria glow in orange/red/yellow color and the actin appears as white filamentous structures throughout all the cells. The DNA in the nuclei appears cyan (between blue and green). 63x Objective Magnification. Image courtesy of J. Kirk of the Optical Imaging and Vital Microscopy Core, Baylor College of Medicine. </p>
     <figure>
-      <img class="img-container" src="img13.jpg">
-      <figcaption>Fig. 1. Selecting red component (options: red, green, blue, or grayscale)</figcaption>
-    </figure>
-    <figure>
       <img class="img-container" src="img14.jpg">
-      <figcaption>Fig. 2. Selecting filter type (options: <b>Gaussian</b>, Laplacian of Gaussian, Band) with variable &sigma;, applying filter</figcaption>
+      <figcaption>Fig. 1. Selecting color domain (options: <b>red</b>, green, blue, grayscale), filter type (options: <b>Gaussian</b>, Laplacian of Gaussian, Band), and &sigma;; applying filter</figcaption>
     </figure>
-      <p>Fig. 2 gives spacial domain output for a Lowpass filter with Gaussian distribution. The mitochrondria—originally orange/red/yellow—appear white. </p>
+      <p>Fig. 1 gives spacial domain output for a Low-pass filter with Gaussian distribution &sigma; = 60. The mitochrondria—originally orange/red/yellow—appear white. </p>
     <figure>
       <img class="img-container" src="img16.jpg">
-      <figcaption>Fig. 3. Now blue component is specified, DNA—originally cyan—stands out</figcaption>
+      <figcaption>Fig. 2. Now blue component is specified, DNA—originally cyan—stands out. &sigma; = 40.</figcaption>
     </figure>
     <p>Gaussian filtering is used to blur images and remove noise and detail. The Gaussian filter works by using the 2D Gaussian distribution as a point-spread function, attained by convolving the (discrete approximation of the) 2D Gaussian distribution function with the image, where &sigma; is the standard deviation of the function. <br>
-    <br>- Gaussian filter is a non-uniform Lowpass filter
+    <br>- Gaussian filter is a non-uniform Low-pass filter
     <br>- Central pixels are weighted more than pixels on the periphery
-    <br>- Larger values of &sigma; produce a wider peak (greater blurring). With Highpass filtering, the opposite is true. </p>
+    <br>- Larger values of &sigma; produce a wider peak (greater blurring). With High-pass filtering, the opposite is true. </p>
     <p><span class="material-symbols-rounded">code</span> Code availiable by request.</p>
     <hr>
     <div class="b">
