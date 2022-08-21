@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=EB+Garamond"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Tyler Naus</title>
+    <style>
+      body {
+        max-width: 800px;
+        padding: 18px;
+        background-color: #fff;
+        font-size: 16px;
+        color: #000;
+        text-align: justify;
+        margin: auto;
+        font-family: 'EB Garamond', 'Iowan Old Style';
+        line-height: 1.1;
+      }
+      div.a {
+        text-align: left;
+      }
+      div.b {
+        text-align: center;
+      }
+      .img-container {
+        width: 100%;
+      }
+      hr {
+        border: 1px solid black;
+      }
+      .material-symbols-rounded {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a">
+      <h1>Biomedical Image Processing</h1>
+      <h2>Using MATLAB</h2>
+      <h3>Tyler Naus</h3>
+      <h4>Winter 2022</h4>
+    </div>
+    <hr>
+      <p>MATLAB GUI built for biomedical image processing:
+      <br>1. Input image
+      <br>2. Convert to grey scale/get component
+      <br>3. 2D Fast Fourier Transform (FFT)
+      <br>4. Frequency domain filter
+      <br>5. 2D Inverse Fast Fourier Transform (IFFT) </p>
+    <div class="b">
+      <img class="img-container" src="img12.jpg">
+      <p><b>Bovine pulmonary artery endothelial cells in the process of dividing</b>. The mitochondria glow in orange/red/yellow color and the actin appears as white filamentous structures throughout all the cells. The DNA in the nuclei appears cyan (between blue and green). 63x Objective Magnification. Image courtesy of J. Kirk of the Optical Imaging and Vital Microscopy Core, Baylor College of Medicine. </p>
+    <figure>
+      <img class="img-container" src="img13.jpg">
+      <figcaption>Fig. 1. Selecting red component (options: red, green, blue, or grayscale)</figcaption>
+    </figure>
+    <figure>
+      <img class="img-container" src="img14.jpg">
+      <figcaption>Fig. 2. Selecting filter type (options: <b>Gaussian</b>, Laplacian of Gaussian, Band) with variable sigma, applying filter</figcaption>
+    </figure>
+    </div>
+      <p>Fig. 2 gives spacial domain output for a low-pass filter with Gaussian distribution. The mitochrondria—originally orange/red/yellow—appear white. </p>
+    <figure>
+      <img class="img-container" src="img15.jpg">
+      <figcaption>Fig. 3. Now blue component is specified, so the DNA—originally cyan—stands out</figcaption>
+    </figure>
+      
+      
