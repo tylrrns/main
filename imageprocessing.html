@@ -27,7 +27,6 @@
       }
       .img-container {
         width: 100%;
-        max-width: 736px;
       }
       hr {
         border: 1px solid black;
@@ -43,40 +42,46 @@
   </head>
   <body>
     <div class="a">
-      <h1>Biomedical Image Processing</h1>
-      <h2>Using MATLAB</h2>
-      <h3>Tyler Naus</h3>
-      <h4>Winter 2022</h4>
+      <h1>Image Processing GUI</h1>
+      <h2>Tyler Naus</h2>
+      <h3>Department of Biomedical Engineering, Wayne State University</h3>
     </div>
     <hr>
-      <p>MATLAB GUI built for image processing:<br>
-      <br>1. Input image
-      <br>2. Convert to grayscale/get component
-      <br>3. 2D Fast Fourier Transform (FFT)
-      <br>4. Frequency domain filter
-      <br>5. 2D Inverse Fast Fourier Transform (IFFT) </p>
-      <figure>
-      <img class="img-container" src="img12.jpg">
-      </figure>
-      <p><b>Bovine pulmonary artery endothelial cells in the process of dividing</b>. The mitochondria glow in orange/red/yellow color and the actin appears as white filamentous structures throughout all the cells. The DNA in the nuclei appears cyan (between blue and green). 63x Objective Magnification. Image courtesy of J. Kirk of the Optical Imaging and Vital Microscopy Core, Baylor College of Medicine. </p>
+    <p>1. Input image
+    <br>2. Convert to gray scale/get component
+    <br>3. Compute 2D Fast Fourier Transform (FFT)
+    <br>4. Apply frequency domain filter
+    <br>5. Compute 2D Inverse Fast Fourier Transform (IFFT) to revieve spacial domain output (filtered image) </p>
+    <div class="b">
+      <img src="cells.jpg">
+    </div>
+    <p>Cells with nuclei in blue, energy factories in green, and actin cytoskeleton in red. Credit: NIH. </p>
+    <hr>
+    <p>Click on image for full resolution </p>
     <figure>
-      <img class="img-container" src="img14.jpg">
-      <figcaption>Fig. 1. Selecting color domain (options: <b>red</b>, green, blue, grayscale), filter type (options: <b>Gaussian</b>, Laplacian of Gaussian, Band), and &sigma;; applying filter</figcaption>
+      <a href="img21.jpg"><img class="img-container" src="img21.jpg"></a>
+      <figcaption>Fig. 1. Red component (cellular cytoskeleton), Gaussian filter, &sigma; = 50</figcaption>
     </figure>
-      <p>Fig. 1 gives spacial domain output for a Low-pass filter with Gaussian distribution &sigma; = 60. The mitochrondria—originally orange/red/yellow—appear white. </p>
     <figure>
-      <img class="img-container" src="img16.jpg">
-      <figcaption>Fig. 2. Now blue component is specified, DNA—originally cyan—stands out. &sigma; = 40.</figcaption>
+      <a href="img20.jpg"><img class="img-container" src="img20.jpg"></a>
+      <figcaption>Fig. 2. Blue component (DNA within nuclei), Gaussian filter, &sigma; = 50</figcaption>
     </figure>
-    <p>Gaussian filtering is used to blur images and remove noise and detail. The Gaussian filter works by using the 2D Gaussian distribution as a point-spread function, attained by convolving the (discrete approximation of the) 2D Gaussian distribution function with the image, where &sigma; is the standard deviation of the function. <br>
-    <br>- Gaussian filter is a non-uniform Low-pass filter
-    <br>- Central pixels are weighted more than pixels on the periphery
-    <br>- Larger values of &sigma; produce a wider peak (greater blurring). With High-pass filtering, the opposite is true. </p>
-    <p><span class="material-symbols-rounded">code</span> Code availiable by request.</p>
+    <figure>
+      <a href="img22.jpg"><img class="img-container" src="img22.jpg"></a>
+      <figcaption>Fig. 3. High-Pass Filter, &sigma; = 50</figcaption>
+    </figure>
+    <figure>
+      <a href="img23.jpg"><img class="img-container" src="img23.jpg"></a>
+      <figcaption>Fig. 4. Band-Stop filter, Band Size = 100</figcaption>
+    </figure>
+    <figure>
+      <a href="img24.jpg"><img class="img-container" src="img24.jpg"></a>
+      <figcaption>Fig. 4. Band-Pass filter, Band Size = 2000</figcaption>
+    </figure>
+      <p><span class="material-symbols-rounded">code</span> Code availiable by request. </p>
     <hr>
     <div class="b">
       <p>&copy; Tyler Naus. All Rights Reserved </p>
-    </div>
   </body>
 </html>
       
