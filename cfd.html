@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Tyler Naus</title>
+    <style>
+      body {
+        max-width: 800px;
+        padding: 18px;
+        background-color: #fff;
+        font-size: 16px;
+        color: #000;
+        text-align: justify;
+        margin: auto;
+        font-family: 'EB Garamond', serif;
+        line-height: 1.1;
+      }
+      div.a {
+        text-align: left;
+      }
+      div.b {
+        text-align: center;
+      }
+      .img-container {
+        width: 100%;
+      }
+      hr {
+        border: 1px solid black;
+      }
+      .material-symbols-rounded {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48 
+      }
+      .box {
+        margin: auto;
+        width: 100%;
+        height: auto;
+        border: 2px solid black;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a">
+      <h1>CFD Simulations</h1>
+      <h2>Tyler Naus</h2>
+    </div>
+    <hr>
+    <div class="box">
+      <details>
+       <summary><h3>3D Bifurcating Artery (Steady)</h3></summary>
+        <p>Ansys Fluent was used to model steady blood flow as it moves from the common carotid artery into the internal and external carotid arteries. </p> 
+        <p>Governing Equations: Continuity equation (steady-state) and Navier-Stokes equations. </p>
+        <p>Boundary Conditions: No-slip, inlet velocity is steady at 0.315 m/s (Re = 600), outlet pressures are static at 100 mmHg (13,332 Pa). </p>
+        <p>Additional Assumptions: Blood density = 1060 kg/m3 and dynamic viscosity = 0.0035 kg/m-s. </p>
+        <p>Mesh: 27,453 nodes, 83,709 elements. </p>
+        <p>Solving For: Pressure and velocity fields, wall shear stress. </p>
+       <figure>
+        <img class="img-container" src="img1.jpg"></a>
+        <figcaption>Geometry and flow conditions</figcaption>
+       </figure>
+       <figure>
+        <a href="img2.jpg"><img class="img-container" src="img2.jpg"></a>
+        <figcaption>Pressure (left) and velocity (right) maps</figcaption>
+       </figure>
+       <figure>
+        <a href="img3.jpg"><img class="img-container" src="img3.jpg"></a>
+        <figcaption>Wall shear stress</figcaption>
+       </figure>
+      </details>
+    </div>
+    <hr>
+    <div class="b">
+      <p>&copy; Tyler Naus. All Rights Reserved </p>
+  </body>
+</html>
