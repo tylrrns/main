@@ -29,11 +29,20 @@
     text-align: center;
     line-height: 1.4;
    }
+  .container {
+   display: flex;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   }
+  .container .row {
+   margin: 0 auto;
+   width: 100%;
+   max-width: 800px;
+   }
   .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
-    max-width: 500px;
-    margin: auto;
-    float: none;
    }
   #link_cursor {
     cursor: pointer;
@@ -56,15 +65,19 @@
  </style>
  </head>
   <body>
-   <div class="card">
-    <h1>Tyler R Naus</h1>
-    <h4><i>Biomedical Engineering Student, Wayne State University</i><br>
-    <br>tnaus@wayne.edu</h4>
-    <span id='link_cursor' onclick="toggleText()" class="material-symbols-rounded">expand_circle_down</span>
+   <div class="container">
+    <div class="row valign-wrapper">
+     <div class="card">
+      <h1>Tyler R Naus</h1>
+      <h4><i>Biomedical Engineering Student, Wayne State University</i><br>
+      <br>tnaus@wayne.edu</h4>
+      <span id='link_cursor' onclick="toggleText()" class="material-symbols-rounded">expand_circle_down</span>
+     </div>
+      <p id='demo' style='display: none'><b>Projects/Papers:</b>
+      <br>– <a href="Naus_2022_Biomaterial.pdf">A Biomaterial Cap for Prevention of Symptomatic Neuroma</a>
+      <br>– <a href="imageprocessing.html">Image Processing</a>
+      <br>– <a href="cfd.html">Computational Fluid Dynamics (CFD) Simulations</a> </p>
+    </div>
    </div>
-    <p id='demo' style='display: none'><b>Projects/Papers:</b>
-    <br>– <a href="Naus_2022_Biomaterial.pdf">A Biomaterial Cap for Prevention of Symptomatic Neuroma</a>
-    <br>– <a href="imageprocessing.html">Image Processing</a>
-    <br>– <a href="cfd.html">Computational Fluid Dynamics (CFD) Simulations</a> </p>
   </body>
 </html>
