@@ -58,12 +58,7 @@
     <div class="box">
       <details>
        <summary><h3>3D Bifurcating Artery (Steady)</h3></summary>
-        <p>Ansys Fluent was used to model steady flow as blood moves from the common carotid artery into the internal and external carotid arteries. </p> 
-        <p><b>Governing Equations</b>: Continuity equation (steady-state), Navier-Stokes equation. </p>
-        <p><b>Boundary Conditions</b>: No-slip, inlet velocity is steady at 0.315 m/s (Re = 600), outlet pressures are static at 100 mmHg (13,332 Pa). </p>
-        <p><b>Add'l Assumptions</b>: Blood density (&rho;) = 1060 kg/m<sup>3</sup>, dynamic viscosity (&mu;) = 0.0035 kg/m-s. </p>
-        <p><b>Mesh</b>: 27,453 nodes, 83,709 elements. </p>
-        <p><b>Solving For</b>: Pressure and velocity contours, wall shear stress (WSS). </p>
+        <p>Ansys Fluent was used to model blood flow through the carotid bifurcation. A steady-state flow was assumed. The continuity equation and Navier-Stokes equations—simplified for steady flow—governed this system. No-slip condition was specified, as was an inlet velocity of 0.315 m/s (Re = 600), and outlet pressures static at 100 mmHg. Blood density was 1,060 kg/m3, dynamic viscosity, 0.0035 kg/m-s. The mesh comprised 27,453 nodes and 83,709 elements. Numerical solutions for pressure and velocity, wall shear stress (WSS) are given in Fig. 1 and 2. </p>
        <figure>
         <a href="img2.jpg"><img class="img-container" src="img2.jpg"></a>
          <figcaption>Fig. 1. Pressure (left) and velocity (right) contours</figcaption>
@@ -72,6 +67,18 @@
         <a href="img3.jpg"><img class="img-container" src="img3.jpg"></a>
          <figcaption>Fig. 2. WSS</figcaption>
        </figure>
+      </details>
+    </div>
+    
+    <div class="box">
+      <details>
+       <summary><h3>3D Bifurcating Artery (Transient)</h3></summary>
+        <p>In this analysis, inlet velocity changed with time to model pulsatile flow through the carotid bifurcation. Simplifying assumptions included no-slip condition, &rho; = 1,060 kg/m3, and &mu; = 0.0035 kg/m-s. Velocity vectors and streamline animation is given below. </p>
+       <figure>
+        <a href="img4.jpg"><img class="img-container" src="img4.jpg"></a>
+         <figcaption>Fig. 1. Velocity vectors</figcaption>
+       </figure>
+       <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/746647604?h=08dabb791d&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:75%;" title="CFD_Artery"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
       </details>
     </div>
     <hr>
