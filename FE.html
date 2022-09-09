@@ -51,20 +51,25 @@
   </head>
   <body>
     <div class="a">
-      <h1>CFD Simulations</h1>
+      <h1>FE Simulations</h1>
       <h2>Tyler Naus</h2>
     </div>
     <hr>
     <div class="box">
       <details>
-       <summary><h3>3D Bifurcating Artery (Steady)</h3></summary>
-        <p>Ansys Fluent was used to model blood flow through the carotid bifurcation. A steady-state flow was assumed. The continuity equation and Navier-Stokes equations—simplified for steady flow—governed this system. No-slip condition was specified, as was an inlet velocity of 0.315 m/s (Re = 600), and outlet pressures static at 100 mmHg. Blood density was 1,060 kg/m3, dynamic viscosity, 0.0035 kg/m-s. The mesh comprised 27,453 nodes and 83,709 elements. Numerical solutions for pressure and velocity, wall shear stress (WSS) are given in Fig. 1 and 2. </p>
+       <summary><h3>3D Bifurcating Artery</h3></summary>
+          <p><b>Software</b>: Ansys Fluent
+          <br><b>Simulation</b>: Carotid Bifurcation CFD
+          <br><b>Governing Equations</b>: Continuity Eqn, Navier-Stokes Eqns
+          <br><b>Boundary Conditions</b>: Inlet: Transient flow data, Outlet: 100 mmHg (13332 Pa) static pressure, Wall: No-slip condition
+          <br><b>Simplifying Assumptions</b>: Isothermal process, Blood density &rho; = 1060 kg/m<sup>3</sup>, &mu; = 0.0035 kg/m-s
+          <br><b>Mesh</b>: 27453 nodes, 87540 elements </p>
        <figure>
-        <a href="img2.jpg"><img class="img-container" src="img2.jpg"></a>
-         <figcaption>Fig. 1. Pressure (left) and velocity (right) contours</figcaption>
+        <a href="img1.png"><img class="img-container" src="img1.png"></a>
+         <figcaption>Fig. 1. Velocity and Pressure Contours</figcaption>
        </figure>
        <figure>
-        <a href="img3.jpg"><img class="img-container" src="img3.jpg"></a>
+        <a href="img2.png"><img class="img-container" src="img2.png"></a>
          <figcaption>Fig. 2. WSS</figcaption>
        </figure>
       </details>
@@ -72,13 +77,11 @@
     
     <div class="box">
       <details>
-       <summary><h3>3D Bifurcating Artery (Transient)</h3></summary>
-        <p>In this analysis, inlet velocity changed with time to model pulsatile flow through the carotid bifurcation. Simplifying assumptions included no-slip condition, &rho; = 1,060 kg/m3, and &mu; = 0.0035 kg/m-s. Velocity vectors and streamline animation is given below. </p>
+       <summary><h3></h3></summary>
+        <p></p>
        <figure>
-        <a href="img4.jpg"><img class="img-container" src="img4.jpg"></a>
-         <figcaption>Fig. 1. Velocity vectors</figcaption>
+         <figcaption></figcaption>
        </figure>
-       <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/746647604?h=08dabb791d&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:75%;" title="CFD_Artery"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
       </details>
     </div>
     <hr>
