@@ -50,7 +50,7 @@
   </head>
   <body>
     <div class="a">
-      <h1>FE Simulations</h1>
+      <h1>FEM/FVM Projects</h1>
       <h2>Tyler Naus</h2>
     </div>
     <hr>
@@ -61,7 +61,7 @@
           <br><b>Simulation</b>: Carotid Bifurcation CFD
           <br><b>Governing Equations</b>: Continuity Eqn, Navier-Stokes Eqns
           <br><b>Boundary Conditions</b>: Inlet: 0.315 m/s steady velocity, Outlet: 100 mmHg (13332 Pa) static pressure, Wall: No-slip condition
-          <br><b>Simplifying Assumptions</b>: Isothermal process, Blood density &rho; = 1060 kg/m<sup>3</sup>, &mu; = 0.0035 kg/m-s
+          <br><b>Simplifying Assumptions</b>: Isothermal, incompressible flow; Blood density &rho; = 1060 kg/m<sup>3</sup>, &mu; = 0.0035 kg/m-s
           <br><b>Mesh</b>: 27453 nodes, 87540 elements </p>
        <figure>
         <a href="img1.png"><img class="img-container" src="img1.png"></a>
@@ -77,13 +77,18 @@
        </figure>
       </details>
     </div>
-    
+         
     <div class="box">
       <details>
-       <summary><h3></h3></summary>
-        <p></p>
+       <summary><h3>Lid-driven cavity flow</h3></summary>
+          <p><b>Software</b>: OpenFOAM
+          <br><b>Simulation</b>: Lid-driven cavity flow
+          <br><b>Governing Equations</b>: Incompressible laminar N-S Eqns (icoFoam solver)
+          <br><b>Boundary Conditions</b>: Top wall moves at steady velocity of 1 m/s, No-slip at walls
+          <br><b>Simplifying Assumptions</b>: Isothermal, incompressible, laminar flow </p>
        <figure>
-         <figcaption></figcaption>
+        <a href="cavity.png"><img class="img-container" src="cavity.png"></a>
+         <figcaption>Fig. 1</figcaption>
        </figure>
       </details>
     </div>
