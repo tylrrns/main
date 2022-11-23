@@ -70,6 +70,7 @@
     <hr>
       <h2>Denoising Data with the FFT</h2>
       <img class="img-container" src="FFT_ex.svg">
+      <p><center>[<a href="FFT_ex.svg">view larger</a>]</center></p>
       <p><b>Matlab Code:</b><p></div>
     <div class="f">
       <p style="font-size: 10px">clear all, close all, clc<br>
@@ -80,7 +81,7 @@ t = 0:dt:1;<br>
 fclean = sin(2*pi*50*t) + sin(2*pi*120*t); % Sum of two frequencies<br>
 f = fclean + 2.5*randn(size(t)); % Add some noise<br>
 <br>
-figure; set(gcf, 'Position', [1500 200 2000 2000])<br>
+figure; set(gcf, 'Position', [1500,200,2000,2000])<br>
 subplot(3,1,1)<br>
 plot(t,f,'c','Color','red','LineWidth',1.5), hold on<br>
 plot(t,fclean,'k','Color','black','LineWidth',1.5)<br>
