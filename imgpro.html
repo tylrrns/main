@@ -68,7 +68,7 @@
       <figcaption>Band-Pass filter, Band Size = 2000</figcaption>
     </figure>
     <hr>
-      <h2>Denoising Data with the FFT</h2>
+      <h2>Denoising Data with FFT</h2>
       <img class="img-container" src="FFT_ex.svg">
       <p><center>[<a href="FFT_ex.svg">view larger</a>]</center></p>
       <p><b>Matlab Code:</b><p></div>
@@ -111,6 +111,44 @@ subplot(3,1,2); set(gca,'FontSize',7)<br>
 plot(t,ffilt,'-','Color','blue','LineWidth',1.5)<br>
 l1 = legend('Filtered'); set(l1,'FontSize',14)<br>
         ylim([-10 10]); set(gca,'FontSize',14)</p>
+    </div>
+    <hr>
+    <h2>Computing Derivatives with FFT</h2>
+      <img class="img-container" src="FFT_derivative.svg">
+      <p><center>[<a href="FFT_derivative.svg">view larger</a>]</center></p>
+      <p><b>Matlab Code:</b><p></div>
+    <div class="f">
+      <p>clear all, close all, clc<br>
+<br>
+n = 64;<br>
+L = 30;<br>
+dx = L/(n);<br>
+x = -L/2:dx:L/2-dx;<br>
+f = sin(x).*exp(-x.^2/25); % Function<br>
+df = (cos(x).*exp(-x.^2/25) + (2/25)*x.*f); % Derivative<br>
+<br>
+%% Approximate derivative using finite difference<br>
+for kappa=1:length(df)-1<br>
+  dfFD(kappa) = (f(kappa+1)-f(kappa))/dx;<br>
+end<br>
+dfFD(end+1) = dfFD(end);<br>
+<br>
+%% Derivative using FFT (spectral derivative)<br>
+fhat = fft(f);<br>
+kappa = (2*pi/L)*[-n/2:n/2-1];<br>
+kappa = fftshift(kappa); % Reorder FFT frequencies<br>
+dfhat = i*kappa.*fhat;<br>
+dfFFT = real(ifft(dfhat));<br>
+<br>
+%% Plotting commands<br>
+<br>
+plot(x,df,'k','LineWidth',2), hold on<br>
+plot(x,dfFD,'b--','Color','red','LineWidth',1.5)<br>
+plot(x,dfFFT,'c--','Color','blue','LineWidth',1.5)<br>
+l1 = legend('True Derivative','Finite Difference','FFT Derivative')<br>
+set(gca,'FontSize',14);<br>
+set(l1,'FontSize',14);<br>
+set(gcf,'Position',[1500,200,1500,700]) </p>
     </div>
     <hr>
     <div class="b">
