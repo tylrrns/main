@@ -33,10 +33,9 @@
   </head>
   <body>
     <div class="a">
-      <h1>Image Processing GUI</h1>
-      <h2>Tyler Naus</h2>
-      <h3>Department of Biomedical Engineering, Wayne State University</h3>
-    <hr>
+      <h3>Image Processing GUI (Matlab)</h3>
+      <h4>Tyler Naus</h4>
+      <h4>Department of Biomedical Engineering, Wayne State University</h4>
     <p>1. Input image
     <br>2. Convert to gray scale/get component
     <br>3. Compute 2D Fast Fourier Transform (FFT)
@@ -65,6 +64,48 @@
       <a href="img24.jpg"><img class="img-container" src="img24.jpg"></a>
       <figcaption>Band-Pass filter, Band Size = 2000</figcaption>
     </figure>
+    <hr>
+      <h3>Denoising Data with the FFT</h3>
+      <img class="img-container" src="FFT_ex.svg">
+      <h4>Matlab Code:</4>
+      <p style="font-size: 10px">clear all, close all, clc<br>
+      <br>
+%% Create a simple signal with two frequencies<br>
+dt = .001;<br>
+t = 0:dt:1;<br>
+fclean = sin(2*pi*50*t) + sin(2*pi*120*t); % Sum of two frequencies<br>
+f = fclean + 2.5*randn(size(t)); % Add some noise<br>
+<br>
+figure; set(gcf, 'Position', [1500 200 2000 2000])<br>
+subplot(3,1,1)<br>
+plot(t,f,'c','Color','red','LineWidth',1.5), hold on<br>
+plot(t,fclean,'k','Color','black','LineWidth',1.5)<br>
+l1 = legend('Noisy','Clean'); set(l1,'FontSize',14)<br>
+<br>
+%% Compute the Fast Fourier Transform FFT<br>
+n = length(t);<br>
+fhat = fft(f,n); % Compute the FFT<br>
+PSD = fhat.*conj(fhat)/n; % Power spectrum (power per freq)<br>
+freq = 1/(dt*n)*(0:n); % Create x-axis of frequencies in Hz<br>
+L = 1:floor(n/2); % Only plot the first half of the freqs<br>
+<br>
+subplot(3,1,3); set(gca, 'FontSize', 7)<br>
+plot(freq(L), PSD(L),'c','Color','red','LineWidth', 1.5), hold on<br>
+set(gca,'FontSize',14)<br>
+<br>
+%% Use the PSD to filter out noise<br>
+indicies = PSD>100; % Find all freqs with large power<br>
+PSDclean = PSD.*indicies; % Zero out all others<br>
+fhat = indicies.*fhat; % Zero out small Fourier coeffs. in Y<br>
+ffilt = ifft(fhat); % Inverse FFT for filtered time signal<br>
+<br>
+plot(freq(L),PSDclean(L),'-','Color','blue','LineWidth',1.5)<br>
+l1 = legend('Noisy','Filtered'); set(l1,'FontSize',14)<br>
+<br>
+subplot(3,1,2); set(gca,'FontSize',7)<br>
+plot(t,ffilt,'-','Color','blue','LineWidth',1.5)<br>
+l1 = legend('Filtered'); set(l1,'FontSize',14)<br>
+        ylim([-10 10]); set(gca,'FontSize',14)</p>
     </div>
     <hr>
     <div class="b">
