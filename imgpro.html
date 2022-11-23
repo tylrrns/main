@@ -143,8 +143,8 @@ dfFFT = real(ifft(dfhat));<br>
 %% Plotting commands<br>
 <br>
 plot(x,df,'k','LineWidth',2), hold on<br>
-plot(x,dfFD,'b--','Color','red','LineWidth',1.5)<br>
-plot(x,dfFFT,'c--','Color','blue','LineWidth',1.5)<br>
+plot(x,dfFD,'--','Color','red','LineWidth',1.5)<br>
+plot(x,dfFFT,'--','Color','blue','LineWidth',1.5)<br>
 l1 = legend('True Derivative','Finite Difference','FFT Derivative')<br>
 set(gca,'FontSize',14);<br>
 set(l1,'FontSize',14);<br>
