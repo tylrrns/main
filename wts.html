@@ -10,7 +10,7 @@
         max-width: 600px;
         padding: 12px;
         background-color: #fff;
-        font-size: 1.3em;
+        font-size: 18px;
         color: #000;
         text-align: justify;
         margin: auto;
@@ -21,10 +21,16 @@
   display: flex; /* equal height of the children */
 }
 
-.col {
-  flex: 1; /* additionally, equal width */
-  align-items: center;
-  padding: 12px;
+.col1 {
+  flex: 1;
+  max-height: 306px;
+  padding: 6px;
+  border: 3px solid black;
+}
+.col2 {
+  flex: 1;
+  max-height: 306px;
+  padding: 0px;
   border: 3px solid black;
 }
 
@@ -33,18 +39,17 @@
       }
 p:first-letter{
   float: left;
-  font-size: 40px;
-  line-height: 30px;
+  font-size: 36px;
+  line-height: 26px;
   padding: 3px;
 }
     </style>
   </head>
   <body>
-    <div class="row"><div class="col">
+    <div class="row"><div class="col1">
       <p>Then, as now, neatness in dress and form, with a strict conformity to the rules, were the qualifications required for office, and I suppose I was not found to excel in any of these.</p>
       <img class="img-container" src="https://upload.wikimedia.org/wikipedia/commons/8/8e/William_Tecumseh_Sherman_Signature.svg">
     </div>
-    <div class="col">
+    <div class="col2">
     <img class="img-container" src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Gen._William_T._Sherman_-_NARA_-_529353.jpg">
-    </div>
     </div>
