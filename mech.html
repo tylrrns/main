@@ -5,17 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tyler Naus</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
     <style>
       body {
         max-width: 800px;
         padding: 18px;
         background-color: #fff;
-        font-size: 16px;
+        font-size: 18px;
         color: #000;
         text-align: justify;
         margin: auto;
-        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-        line-height: 1.1;
+        font-family: 'Gloucester MT Extra Cond.';
+        line-height: 1.15;
       }
       div.a {
         text-align: left;
@@ -43,7 +48,7 @@
   </head>
   <body>
     <div class="a">
-      <h2>CFD Simulations</h2>
+      <h1>CFD Analysis</h1>
       <h3>Tyler Naus</h3>
     </div>
     <hr>
@@ -51,10 +56,12 @@
       <details>
        <summary><h3>3D Carotid Bifurcation</h3></summary>
           <p><b>Software</b>: Ansys Fluent
-          <br><b>Governing Equations</b>: Continuity Eqn, Navier-Stokes Eqns
+          <br><b>Governing Equations</b>: <br>Mass conservation: \(\frac {\partial u_i}{\partial x_i} = 0\)<br>
+          Momentum conservation: \(\frac {\partial u_i}{\partial t} + u_j \frac{\partial u_i}{\partial x_j} = - \frac {1}{\rho} \frac {\partial P}{\partial x_i} + \nu \frac{\partial^2 u_i}{\partial x_j \partial x_j}\)<br>
+            where \(u_i\) = Fluid velocity (vector), \(P\) = Fluid pressure (scalar), \(\rho\) = Density, \(\nu\) = Kinematic viscosity <br>
           <br><b>Boundary Conditions</b>: Inlet: 0.315 m/s steady velocity, Outlet: 100 mmHg (13332 Pa) static pressure, Wall: No-slip
-          <br><b>Simplifying Assumptions</b>: Isothermal, incompressible flow; Blood density &rho; = 1060 kg/m<sup>3</sup>, &mu; = 0.0035 kg/m-s
-          <br><b>Mesh</b>: 27453 nodes, 87540 elements </p>
+          <br><b>Simplifying Assumptions</b>: Isothermal, incompressible flow; Blood density \(\rho\) = 1060 kg/m<sup>3</sup>, \(\nu\) = 3.30 x 10<sup>-6</sup> m<sup>2</sup>/s
+          <br><b>Mesh</b>: 27,453 nodes, 87,540 elements </p>
         <a href="img2.png"><img class="img-container" src="img2.png"></a>
         <a href="img3.png"><img class="img-container" src="img3.png"></a>
       </details>
@@ -95,5 +102,6 @@
     <hr>
     <div class="b">
       <p>&copy;Tyler Naus. All Rights Reserved </p>
+      </div>
   </body>
 </html>
