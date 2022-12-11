@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,12 +20,17 @@
         font-family: 'EB Garamond';
         line-height: 1.1;
       }
+      h2, h3 {
+        font-weight: normal;
+      }
       .img-container {
         width: 100%;
         border: 2px solid black;
       }
       .img-cont {
-        width: 30%;
+        width: 32%;
+      }
+      .a {
       }
       * {
   box-sizing: border-box;
@@ -35,7 +38,8 @@
 .column {
   float: left;
   width: 50%;
-  padding: 6px;
+  padding: 0px;
+  border: 1px solid black;
 }
 .row::after {
   clear: both;
@@ -52,7 +56,6 @@ blockquote p {
   </head>
   <body>
       <img class="img-container" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/1819_Passage_OfThe_Delaware_byThomasSully_MFABoston.jpeg">
-      <center><p><i>The Passage of the Delaware</i></p></center>
       <div class="row">
   <div class="column">
     <figure></figure><img src="wash.svg" style="width:80%">
@@ -61,13 +64,15 @@ blockquote p {
     <img src="knox.svg" style="width:80%">
   </div>
   </div>
- 
+  <br>
+  <div class="a">
   <figure><blockquote>
-      <center><h3><i>Passage of the Delaware, in Dec. 25<sup>th</sup>, 1776,</i></h3><p><i>By  the American Troops under the command of General Washington.</i></p></center>
+      <center><h2><i>The Passage of the Delaware, in Dec. 25<sup>th</sup>, 1776,</i></h2><h3><i>By  the American Troops under the command of General Washington.</i></h3></center>
         <p>Boats were in readiness, and the Troops began to cross about sunset, but the force of the current, the sharpness of the frost, the darkness of the night, the Ice which made during the operation, and a high wind, rendered the passage of the River extremely difficult, and but for the stentorian lungs and extraordinary exertions of Colonel Knox, it could not have been effected in season to favor the enterprise.</p></blockquote>
 </figure>
       <figure><blockquote>
-        <p><b>"We want <u>great men</u> who, when fortune frowns, <u>will not be discouraged.</u>"</b><br><img class="img-cont" src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Henry_Knox_Signature2.svg"></p></blockquote>
+        <h3><i>"We want great men who, when fortune frowns, will not be discouraged."</i><br><br><img class="img-cont" src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Henry_Knox_Signature2.svg"></h3></blockquote>
 </figure>
+    </div>
   </body>
   </html>
