@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tyler Naus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script>
+  function toggleText() {
+   var text = document.getElementById("demo");
+   if (text.style.display === "none") {
+    text.style.display = "block";
+   } else {
+    text.style.display = "none";
+   }
+  }
+  </script>
+  <style>
+  body {
+    max-width: 480px;
+    background-color: #fff;
+    color: #000;
+    font-family: 'EB Garamond';
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.25;
+   }
+  .container {
+   display: flex;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   }
+  .container .row {
+   margin: 0 auto;
+   padding: 12px;
+   width: 90%;
+   max-width: 700px;
+   }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+   }
+  .flag {
+    text-align: center;
+    line-height: 0.5;
+  }
+  }
+  #link_cursor {
+    cursor: pointer;
+    color: #0A3161;
+   }
+  #demo {
+    text-align: left;
+   }
+  a {
+    color: #0A3161;
+   }
+.material-symbols-sharp {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 600,
+  'GRAD' 200,
+  'opsz' 48
+}
+</style>
+ </head>
+  <body>
+   <div class="container">
+    <div class="row valign-wrapper">
+        <div class="flag">
+       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" width = 16%/>
+      </div>
+     <div class="card">
+      <h1>Tyler Naus</h1>
+      <h4><a href="mailto:tylernaus@outlook.com">tylernaus@outlook.com</a></h4>
+      <span id='link_cursor' onclick="toggleText()" <span class="material-symbols-sharp">expand_more</span>
+     </div>
+     <div id='demo' style='display:none'>
+      <p>– <a href="Naus_2022_Biomaterial.pdf">A Biomaterial Cap for Prevention of Symptomatic Neuroma</a>
+      <br>– <a href="imgpro.html">Biomedical Image Processing</a>
+      <br>– <a href="mech.html">CFD Analysis</a>
+      <br>– <a href="Dynamics_Eqs.pdf">Engineering Mech.: Dynamics Equations</a> </p>
+      <h3>Library</h3>
+      <p>– <a href="Roosevelt_1900_Character.pdf">T. Roosevelt. "Character and Success" (1900)</a>
+      <br>– Samuel Adams - <a href="Adams_1771.pdf">1771</a>, <a href="Adams_1776.pdf">1776</a>
+      <br>– <a href="1776.html">Passage of the Delaware</a>
+      <br>– <a href="PH.html">Patrick Henry</a> - <a href="Henry_1788.pdf">1788</a>
+      <br>– <a href="wts.html">W.T. Sherman</a>
+      <br>– T. Roosevelt. <i>Ranch Life and the Hunting Trail</i> (1888)
+      <br>– <a href="TR.pdf">T. Roosevelt</a>
+      <br>– <a href="strife.html"><b>Strife</b></a></p>
+      <div class="flag">
+       <p>&copy;Tyler Naus. All Rights Reserved </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </body>
+</html>
